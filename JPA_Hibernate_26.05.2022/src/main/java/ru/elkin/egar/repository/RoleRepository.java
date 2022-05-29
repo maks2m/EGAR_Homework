@@ -6,7 +6,9 @@ import ru.elkin.egar.util.EmfUtil;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.TypedQuery;
+import java.util.Collections;
 import java.util.List;
+import java.util.Map;
 
 public class RoleRepository implements RepositoryInterface<Role>{
     private final EntityManagerFactory entityManagerFactory = EmfUtil.entityManagerFactory();
@@ -48,5 +50,14 @@ public class RoleRepository implements RepositoryInterface<Role>{
         Role entity = entityManager.find(Role.class, id);
         entityManager.remove(entity);
         entityManager.getTransaction().commit();
+    }
+
+    public List<Role> findRoleWithUsers() {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        TypedQuery<Role> typedQuery = entityManager.createNamedQuery(
+                "find_all_roles",
+                Role.class);
+        typedQuery.setHint("javax.persistence.fetchgraph", entityManager.getEntityGraph("get_users_by_role"));
+        return typedQuery.getResultList();
     }
 }

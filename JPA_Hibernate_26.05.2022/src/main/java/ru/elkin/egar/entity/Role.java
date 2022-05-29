@@ -18,6 +18,9 @@ import java.util.Set;
         name = "find_all_roles",
         query = "SELECT r FROM Role r"
 )
+@NamedEntityGraph(
+        name = "get_users_by_role",
+        attributeNodes = @NamedAttributeNode("users"))
 public class Role {
 
     @Id

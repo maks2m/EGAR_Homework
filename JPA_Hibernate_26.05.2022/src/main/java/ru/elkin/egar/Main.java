@@ -9,12 +9,30 @@ import ru.elkin.egar.repository.ProductionOrderRepository;
 import ru.elkin.egar.repository.RoleRepository;
 import ru.elkin.egar.repository.UserRepository;
 
+import java.time.LocalDate;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         UserRepository userRepository = new UserRepository();
         RoleRepository roleRepository = new RoleRepository();
         ProductionOrderRepository productionOrderRepository = new ProductionOrderRepository();
         AssignmentRepository assignmentRepository = new AssignmentRepository();
+
+
+        //Criteria API
+//        productionOrderRepository.findProductionOrderForOneUserBetweenDates(
+//                        4L,
+//                        LocalDate.of(2019, 1, 1),
+//                        LocalDate.of(2019, 12, 31))
+//                .stream().map(ProductionOrder::toString).forEach(System.out::println);
+
+
+        //fetchgraph runtime
+//        System.out.println(userRepository.findByIdWithAllEntity(4L));
+        //fetchgraph in entity
+//        System.out.println(roleRepository.findRoleWithUsers());
+
 
 //        userRepository.findAll().stream().map(User::toString).forEach(System.out::println);
 //        User user = userRepository.findById(4L);

@@ -1,12 +1,15 @@
 package ru.elkin.egar.repository;
 
+import ru.elkin.egar.entity.Assignment;
+import ru.elkin.egar.entity.ProductionOrder;
 import ru.elkin.egar.entity.User;
 import ru.elkin.egar.util.EmfUtil;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.TypedQuery;
+import javax.persistence.*;
+import javax.persistence.criteria.*;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class UserRepository implements RepositoryInterface<User>{
     private final EntityManagerFactory entityManagerFactory = EmfUtil.entityManagerFactory();
@@ -48,5 +51,17 @@ public class UserRepository implements RepositoryInterface<User>{
         User entity = entityManager.find(User.class, id);
         entityManager.remove(entity);
         entityManager.getTransaction().commit();
+    }
+
+    public User findByIdWithAllEntity(Long id) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityGraph<User> entityGraph = entityManager.createEntityGraph(User.class);
+        Subgraph<ProductionOrder> productionOrderSubgraph = entityGraph.addSubgraph("productionOrders");
+        entityGraph.addAttributeNodes("productionOrders");
+        Subgraph<Assignment> assignmentSubgraph = productionOrderSubgraph.addSubgraph("assignment");
+        productionOrderSubgraph.addAttributeNodes("assignment");
+        Map<String, Object> map = new HashMap<>();
+        map.put("javax.persistence.fetchgraph", entityGraph);
+        return entityManager.find(User.class, id, map);
     }
 }
