@@ -1,14 +1,12 @@
 package ru.elkin.egar.repository;
 
-import ru.elkin.egar.entity.Role;
+import ru.elkin.egar.Role;
 import ru.elkin.egar.util.EmfUtil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.TypedQuery;
-import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 
 public class RoleRepository implements RepositoryInterface<Role>{
     private final EntityManagerFactory entityManagerFactory = EmfUtil.entityManagerFactory();

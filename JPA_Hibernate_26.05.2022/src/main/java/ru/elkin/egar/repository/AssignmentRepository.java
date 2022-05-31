@@ -1,6 +1,6 @@
 package ru.elkin.egar.repository;
 
-import ru.elkin.egar.entity.Assignment;
+import ru.elkin.egar.Assignment;
 import ru.elkin.egar.util.EmfUtil;
 
 import javax.persistence.EntityManager;

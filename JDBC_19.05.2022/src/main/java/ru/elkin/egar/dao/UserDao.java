@@ -1,8 +1,8 @@
 package ru.elkin.egar.dao;
 
 import ru.elkin.egar.dao.ext.UserRoleRelation;
-import ru.elkin.egar.entity.Role;
-import ru.elkin.egar.entity.User;
+import ru.elkin.egar.Role;
+import ru.elkin.egar.User;
 
 import java.sql.*;
 import java.util.ArrayList;

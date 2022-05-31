@@ -1,16 +1,9 @@
 package ru.elkin.egar;
 
-import ru.elkin.egar.entity.Assignment;
-import ru.elkin.egar.entity.ProductionOrder;
-import ru.elkin.egar.entity.Role;
-import ru.elkin.egar.entity.User;
 import ru.elkin.egar.repository.AssignmentRepository;
 import ru.elkin.egar.repository.ProductionOrderRepository;
 import ru.elkin.egar.repository.RoleRepository;
 import ru.elkin.egar.repository.UserRepository;
-
-import java.time.LocalDate;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {

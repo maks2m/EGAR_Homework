@@ -1,4 +1,4 @@
-package ru.elkin.egar.entity;
+package ru.elkin.egar;
 
 
 import lombok.Data;

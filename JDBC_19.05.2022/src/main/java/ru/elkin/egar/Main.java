@@ -4,10 +4,6 @@ import ru.elkin.egar.dao.AssignmentDao;
 import ru.elkin.egar.dao.ProductionOrderDao;
 import ru.elkin.egar.dao.RoleDao;
 import ru.elkin.egar.dao.UserDao;
-import ru.elkin.egar.entity.Assignment;
-import ru.elkin.egar.entity.ProductionOrder;
-import ru.elkin.egar.entity.Role;
-import ru.elkin.egar.entity.User;
 
 public class Main {
     public static void main(String[] args) {

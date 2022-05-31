@@ -1,6 +1,6 @@
 package ru.elkin.egar.dao;
 
-import ru.elkin.egar.entity.ProductionOrder;
+import ru.elkin.egar.ProductionOrder;
 
 import java.sql.*;
 import java.time.LocalDate;

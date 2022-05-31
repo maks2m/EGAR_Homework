@@ -3,10 +3,10 @@
              xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     <persistence-unit name="Persistence" transaction-type="RESOURCE_LOCAL">
-        <class>ru.elkin.egar.entity.ProductionOrder</class>
-        <class>ru.elkin.egar.entity.Role</class>
-        <class>ru.elkin.egar.entity.User</class>
-        <class>ru.elkin.egar.entity.Assignment</class>
+        <class>ru.elkin.egar.ProductionOrder</class>
+        <class>ru.elkin.egar.Role</class>
+        <class>ru.elkin.egar.User</class>
+        <class>ru.elkin.egar.Assignment</class>
         <properties>
             <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />

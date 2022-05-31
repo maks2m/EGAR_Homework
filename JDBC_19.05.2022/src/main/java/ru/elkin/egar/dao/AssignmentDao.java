@@ -1,6 +1,6 @@
 package ru.elkin.egar.dao;
 
-import ru.elkin.egar.entity.Assignment;
+import ru.elkin.egar.Assignment;
 
 import java.sql.Date;
 import java.sql.*;

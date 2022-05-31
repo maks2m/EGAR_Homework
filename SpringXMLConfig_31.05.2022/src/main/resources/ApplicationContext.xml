@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="income" class="ru.elkin.egar.Income">
+        <property name="id" value="1"/>
+        <property name="name" value="work"/>
+        <property name="planMoney" value="3000000"/>
+        <property name="factMoney" value="0"/>
+    </bean>
+    <bean id="deposit" class="ru.elkin.egar.Deposit">
+        <property name="id" value="1"/>
+        <property name="name" value="debet_cart"/>
+        <property name="money" value="0"/>
+    </bean>
+    <bean id="expenses" class="ru.elkin.egar.Expenses">
+        <property name="id" value="1"/>
+        <property name="name" value="food"/>
+        <property name="planMoney" value="800000"/>
+        <property name="factMoney" value="0"/>
+    </bean>
+
+    <bean id="transactionIncomeDeposit" class="ru.elkin.egar.TransactionIncomeDeposit">
+        <constructor-arg index="0" ref="income"/>
+        <constructor-arg index="1" ref="deposit"/>
+    </bean>
+
+    <bean id="transactionDepositExpenses" class="ru.elkin.egar.TransactionDepositExpenses">
+        <property name="deposit" ref="deposit"/>
+        <property name="expenses" ref="expenses"/>
+    </bean>
+
+</beans>

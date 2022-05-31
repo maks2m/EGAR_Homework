@@ -1,8 +1,7 @@
 package ru.elkin.egar.repository;
 
-import ru.elkin.egar.entity.Assignment;
-import ru.elkin.egar.entity.ProductionOrder;
-import ru.elkin.egar.entity.User;
+import ru.elkin.egar.ProductionOrder;
+import ru.elkin.egar.User;
 import ru.elkin.egar.util.EmfUtil;
 
 import javax.persistence.EntityManager;

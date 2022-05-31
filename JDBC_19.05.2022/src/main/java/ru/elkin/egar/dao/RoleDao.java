@@ -1,6 +1,6 @@
 package ru.elkin.egar.dao;
 
-import ru.elkin.egar.entity.Role;
+import ru.elkin.egar.Role;
 
 import java.sql.*;
 import java.util.ArrayList;
