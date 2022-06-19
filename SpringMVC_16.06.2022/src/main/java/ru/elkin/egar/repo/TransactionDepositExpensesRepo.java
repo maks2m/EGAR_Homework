@@ -1,0 +1,14 @@
+package ru.elkin.egar.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import ru.elkin.egar.entity.TransactionDepositExpenses;
+
+import java.util.List;
+
+public interface TransactionDepositExpensesRepo extends JpaRepository<TransactionDepositExpenses, Long> {
+    @Query("select t from TransactionDepositExpenses t join fetch t.deposit join fetch t.expenses order by t.id")
+    List<TransactionDepositExpenses> findAllTransaction();
+
+    List<TransactionDepositExpenses> findAllByOrderById();
+}

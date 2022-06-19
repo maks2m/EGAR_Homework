@@ -1,0 +1,17 @@
+body {
+    padding: 20px;
+}
+
+.table th, .table td {
+    border: 1px solid #ff0000;
+    /*padding: 2px;*/
+}
+.table_edit, .table_edit td {
+    border: 1px solid #ff0000;
+    /*padding: 2px;*/
+}
+
+/*
+form {
+    font-family: sans-serif;
+}*/
