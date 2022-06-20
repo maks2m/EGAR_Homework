@@ -55,14 +55,14 @@ public class DepositController implements EntityControllerInterface<Deposit> {
 
         BeanUtils.copyProperties(item, itemFromDB, "id");
         depositRepo.save(itemFromDB);
-        return "redirect:/deposit";
+        return "redirect:/";
     }
 
     @Override
     @PostMapping("{id}")
     public String delete(@PathVariable("id") Long id) {
         depositRepo.deleteById(id);
-        return "redirect:/deposit";
+        return "redirect:/";
     }
 
 }

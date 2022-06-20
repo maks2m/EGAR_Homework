@@ -53,14 +53,14 @@ public class IncomeController implements EntityControllerInterface<Income> {
         }
         BeanUtils.copyProperties(item, itemFromDB, "id");
         incomeRepo.save(itemFromDB);
-        return "redirect:/income";
+        return "redirect:/";
     }
 
     @Override
     @PostMapping("{id}")
     public String delete(@PathVariable("id") Long id) {
         incomeRepo.deleteById(id);
-        return "redirect:/income";
+        return "redirect:/";
     }
 
 }

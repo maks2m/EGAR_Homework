@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Transaction Income Deposit</title>
-    <link rel="stylesheet" href="./../static/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
 <div th:insert="~{header :: header}"></div>
 
-<div th:fragment="transaction_income_deposit_fradment">
+<div th:fragment="transaction_income_deposit_fragment">
     <a href="transaction_income_deposit/new">New Transaction Income Deposit</a>
     <h3>Transaction Income Deposit lists</h3>
     <table class="table">
@@ -22,7 +22,7 @@
                 <th scope="col">Deposit</th>
                 <th scope="col">Money</th>
                 <th scope="col">Date</th>
-
+                <th colspan="2">Edit</th>
             </div>
         </tr>
         </thead>

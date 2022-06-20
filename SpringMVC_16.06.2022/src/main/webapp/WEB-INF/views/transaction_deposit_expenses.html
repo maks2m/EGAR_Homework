@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Transaction Deposit Expenses</title>
-    <link rel="stylesheet" href="./../static/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
 <div th:insert="~{header :: header}"></div>
 
-<div th:fragment="transaction_deposit_expenses_fradment">
+<div th:fragment="transaction_deposit_expenses_fragment">
     <a href="transaction_deposit_expenses/new">New Transaction Deposit Expenses</a>
     <h3>Transaction Deposit Expenses lists</h3>
     <table class="table">
@@ -22,7 +22,7 @@
                 <th scope="col">Expenses</th>
                 <th scope="col">Money</th>
                 <th scope="col">Date</th>
-
+                <th colspan="2">Edit</th>
             </div>
         </tr>
         </thead>

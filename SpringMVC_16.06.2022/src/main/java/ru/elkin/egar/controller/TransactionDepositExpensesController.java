@@ -99,7 +99,7 @@ public class TransactionDepositExpensesController implements TransferEntityContr
         } else {
             transactionDepositExpensesService.transactionEdit(item, oldItem);
         }
-        return "redirect:/transaction_deposit_expenses";
+        return "redirect:/";
     }
 
     @Override
@@ -107,7 +107,7 @@ public class TransactionDepositExpensesController implements TransferEntityContr
     public String delete(@PathVariable("id") Long id) {
         TransactionDepositExpenses transactionDepositExpenses = transactionDepositExpensesRepo.findById(id).orElseThrow();
         transactionDepositExpensesService.transactionDelete(transactionDepositExpenses);
-        return "redirect:/transaction_deposit_expenses";
+        return "redirect:/";
     }
 
 }

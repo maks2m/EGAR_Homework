@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
+<head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
 <div th:fragment="header">
-    <table>
+    <table class="table_header">
         <tr>
             <td><a href="/">Index</a></td>
+            <td></td>
             <td><a href="/income">Income</a></td>
             <td><a href="/transaction_income_deposit">TransactionIncomeDeposit</a></td>
             <td><a href="/deposit">Deposit</a></td>

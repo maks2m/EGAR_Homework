@@ -54,13 +54,13 @@ public class ExpensesController implements EntityControllerInterface<Expenses> {
 
         BeanUtils.copyProperties(item, itemFromDB, "id");
         expensesRepo.save(itemFromDB);
-        return "redirect:/expenses";
+        return "redirect:/";
     }
 
     @Override
     @PostMapping("{id}")
     public String delete(@PathVariable("id") Long id) {
         expensesRepo.deleteById(id);
-        return "redirect:/expenses";
+        return "redirect:/";
     }
 }

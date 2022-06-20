@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Expenses</title>
-    <link rel="stylesheet" href="./../static/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
 <div th:insert="~{header :: header}"></div>
 
-<div th:fragment="expenses_fradment">
+<div th:fragment="expenses_fragment">
     <a href="expenses/new">New expenses</a>
     <h3>Expenses lists</h3>
     <table class="table">
@@ -21,7 +21,7 @@
                 <th scope="col">Name</th>
                 <th scope="col">PlanMoney</th>
                 <th scope="col">FactMoney</th>
-
+                <th colspan="2">Edit</th>
             </div>
         </tr>
         </thead>

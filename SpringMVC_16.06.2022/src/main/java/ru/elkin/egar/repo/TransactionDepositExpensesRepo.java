@@ -7,8 +7,7 @@ import ru.elkin.egar.entity.TransactionDepositExpenses;
 import java.util.List;
 
 public interface TransactionDepositExpensesRepo extends JpaRepository<TransactionDepositExpenses, Long> {
-    @Query("select t from TransactionDepositExpenses t join fetch t.deposit join fetch t.expenses order by t.id")
+    @Query("select t from TransactionDepositExpenses t join fetch t.deposit join fetch t.expenses order by t.date desc")
     List<TransactionDepositExpenses> findAllTransaction();
 
-    List<TransactionDepositExpenses> findAllByOrderById();
 }
